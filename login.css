@@ -1,24 +1,24 @@
-@media(min-width: 100px) {
-   
+@media(min-width: 100px), (min-height: 100px) {
     html{
         font-size: 3px;
     }
 }
-@media(min-width: 800px) {
+@media(min-width: 800px), (min-height: 300px) {
     html{
         font-size: 5px;
     }
 }
-@media(min-width: 1000px) {
+@media(min-width: 1000px), (min-height: 500px) {
     html{
         font-size: 7px;
     }
 }
-@media(min-width: 1400px) {
+@media(min-width: 1400px), (min-height: 800px){
     html{
         font-size: 10px;
     }
 }
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -38,9 +38,13 @@ body {
     margin:0;
     padding:0;
     overflow-x: hidden;
+
+    background-image: none;
+
     background-size: cover;
     background-repeat: no-repeat;
 
+    background-position: center;
 }
 
 body > *{
