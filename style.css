@@ -1,19 +1,19 @@
-@media(min-width: 100px) {
-    html{
-        font-size: 1px;
-    }
-}
-@media(min-width: 800px) {
+@media(min-width: 100px), (min-height: 100px) {
     html{
         font-size: 3px;
     }
 }
-@media(min-width: 1000px) {
+@media(min-width: 800px), (min-height: 300px) {
     html{
-        font-size: 6px;
+        font-size: 5px;
     }
 }
-@media(min-width: 1400px) {
+@media(min-width: 1000px), (min-height: 500px) {
+    html{
+        font-size: 7px;
+    }
+}
+@media(min-width: 1400px), (min-height: 800px){
     html{
         font-size: 10px;
     }
