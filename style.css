@@ -33,6 +33,24 @@
     display: none; /* Chrome, Safari, and Opera */
 }
 
+.guide  {
+    overflow: auto; /* 또는 overflow: scroll; */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.guide  ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+.guide_body  {
+    overflow: auto; /* 또는 overflow: scroll; */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.guide_body  ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
 .todolist {
     overflow: auto; /* 또는 overflow: scroll; */
     -ms-overflow-style: none; /* IE and Edge */
@@ -200,6 +218,7 @@ p{
     height:85%;
 
     font-size: 1.5rem;
+    overflow-y:scroll;
     font-family: "Noto Sans KR";
 }
 .guide_detail{
