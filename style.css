@@ -525,7 +525,7 @@ p{
 
     border-radius: 10%;
 
-    border: #000 qpx solid;
+    border: #000 1px solid;
 }
 .menu_icon :hover{
     transform: scale(1.08);
