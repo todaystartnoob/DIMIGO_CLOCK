@@ -255,7 +255,7 @@ p{
     flex-direction: column;
     align-items: center;
 
-    font-size: 1vw;
+    font-size: 0.3vw;
 }
 .date{
     position: relative;
