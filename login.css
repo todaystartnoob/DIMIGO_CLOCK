@@ -70,6 +70,9 @@ p{
 .login_container{
     height:73vh;
     width:23vw;
+
+    min-width: 500px;
+
     border:0.5rem #ffffff solid;
     border-radius: 5rem;
 
