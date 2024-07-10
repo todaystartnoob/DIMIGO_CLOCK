@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:title" content="CLOCK">
+    <meta property="og:description" content="시계">
+    <meta property="og:image" content="images/web_head.png">
+    <meta property="og:url" content="https://clock.com">
+    
+    <title>CLOCK</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/clock.png">
+
+    <link rel = "stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Baskervville+SC&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main_body" id="mainBody">
+        <div class="image_uploader" id="imageUploader">
+            <img src="images/uploader.png" id="uploadImg" draggable="false"></img>
+            <input type="file" id="fileInput" style="display: none;">
+        </div>
+
+        <div class="color_box" id="colorBox">
+            <div class="hexcode">
+                <p>HEXCODE</p>
+            </div>
+            <div class="rgb_color">
+                <p>RGB</p>
+            </div>
+        </div>
+
+        <div class="guide" id="GUIDE">
+            <div class="guide_head">
+                <p>GUIDE</p>
+            </div>
+            <div class="guide_body" style="display:flex; flex-direction: column; justify-content: space-evenly;">
+                <ul class="guide_detail">
+                    <li><span class="hilight">space키</span> : 다양한 도구</li>
+                    <li><span class="hilight">t키</span> : 배경 이미지 무작위 변경</li>
+                    <li><span class="hilight">r키</span> : 배경 색상 무작위 변경</li>    
+                    <li><span class="hilight">u키</span> : 배경 이미지 변경</li>    
+                    <li>색상 코드를 복사한 채로 붙여넣기 하면 배경 색상 변경</li>    
+                    <li>배경 색상이 있고, space키를 누르면 복사 가능</li>
+                    <li>화살표로 메모 요일 전환</li>
+                    <li>메모는 1주일 마다, to-do-list는 하루마다 초기화</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="clock" id="clock_body">
+            <div class="clock_background" id="clockbg">
+                <div class="date" style="font-weight: 200;">
+                    <div class="time-display" id="timeDisplay"></div>
+                </div>
+                <div class="time">
+                    <div id="current-activity" class="activity"></div>
+                </div>
+                <div class="next_class">
+                    <div id="next-activity" class="activity"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="memo" id="memo_body">
+            <div class="memo_head">
+                <p style="margin:auto 0;">MEMO</p>
+            </div>
+            <div class="memo_container">
+                <div class="days">
+                    <div class="mon day">
+                        <p>MON</p>
+                    </div>
+                    <div class="tue day">
+                        <p>TUE</p>
+                    </div>
+                    <div class="wen day">
+                        <p>WEN</p>
+                    </div>
+                    <div class="thu day">
+                        <p>THU</p>
+                    </div>
+                    <div class="fri day">
+                        <p>FRI</p>
+                    </div>
+                    <div class="sat day">
+                        <p>SAT</p>
+                    </div>
+                    <div class="sun day">
+                        <p>SUN</p>
+                    </div>
+                </div>
+                <div class="memo_detail" id="memoDetail">
+                    <textarea id="monMemo" class="memoText" tabindex="-1"></textarea>
+                    <textarea id="tueMemo" class="memoText" style="display:none;" tabindex="-1"></textarea>
+                    <textarea id="wenMemo" class="memoText" style="display:none;" tabindex="-1"></textarea>
+                    <textarea id="thuMemo" class="memoText" style="display:none;" tabindex="-1"></textarea>
+                    <textarea id="friMemo" class="memoText" style="display:none;" tabindex="-1"></textarea>
+                    <textarea id="satMemo" class="memoText" style="display:none;" tabindex="-1"></textarea>
+                    <textarea id="sunMemo" class="memoText" style="display:none;" tabindex="-1"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="todolist">
+            <div class="todolist_head">
+                <p style="margin:0 auto;">TO-DO-LIST</p>  <!-- id = inputField에 할일이 입력되고 + 버튼이 눌리면 할일이 나타날 공간 만들기-->
+            </div>
+            <div class="todolist_body">
+                <div id="inputitems" class="input-container">
+                    <input class="input" id="inputField" type="text" autocomplete="off">   <!--text 입력창(할일 입력창) 만들기-->   <!-- + 버튼 만들기 -->
+                    <div class="topline"></div>
+                    <div class="underline"></div>
+                </div>
+                <div class="todolist_container">
+                    <div class="to-dos" id="toDoList" style="padding-bottom: 10%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu" class="menu">
+            <div class="menu_items">
+                <div class="menu_item">
+                    <a class="menu_icon" href="https://xn--299a1v27nvthhjj.com/" target="blank"><img class="menu_item" src="images/food.jpg" draggable="false"></img></a>
+                    <p class="item_name">디미고 급식</p>
+                </div>
+                <div class="menu_item">
+                    <a class="menu_icon" href="https://dimigo.net/login" target="blank"><img class="menu_item" src="images/dipul.png" draggable="false"></img></a>
+                    <p class="item_name">디미고인 풀 서비스</p>
+                </div>
+                <div class="menu_item">
+                    <a class="menu_icon" href="https://www.benedu.co.kr/" target="blank"><img class="menu_item" src="images/benedu.jpg" draggable="false"></img></a>
+                    <p class="item_name">베네듀</p>
+                </div>
+                <div class="menu_item">
+                    <a class="menu_icon" href="https://dimigo.goorm.io/" target="blank"><img class="menu_item" src="images/goorm.png" draggable="false"></img></a>
+                    <p class="item_name">디미고 구름</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,516 @@
+@media(min-width: 100px) {
+    html{
+        font-size: 3px;
+    }
+}
+@media(min-width: 800px) {
+    html{
+        font-size: 5px;
+    }
+}
+@media(min-width: 1000px) {
+    html{
+        font-size: 7px;
+    }
+}
+@media(min-width: 1400px) {
+    html{
+        font-size: 10px;
+    }
+}
+
+.hilight{
+    font-weight: bold;
+}
+
+
+.guide_detail  {
+    overflow: auto; /* 또는 overflow: scroll; */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.guide_detail  ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+.todolist {
+    overflow: auto; /* 또는 overflow: scroll; */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+ }
+.todolist ::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+.memo_detail > *{
+    overflow: auto; /* 또는 overflow: scroll; */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+ }
+  
+.memo_detail > *::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+
+body {
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+body > *{
+    margin : 0;
+    padding : 0;
+    transition: all 0.5s;
+    user-select: none;  
+}
+
+p{
+    margin:0;
+    padding:0;
+}
+
+/*메인 바디*/
+.main_body{
+    width:100vw;
+    height:100vh;
+
+    background-color: #FCFAF9;
+
+    background-image: none;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.image_uploader{
+    position: relative;
+    left:1%;
+    top:2%;
+
+    cursor: pointer;
+    z-index: 1;
+}
+.image_uploader :hover{
+    transform: scale(1.05)
+}
+#uploadImg{
+    width:3%;
+}
+
+.color_box{
+    width:17vw;
+    height:7vh;
+
+    position:fixed;
+    display:flex;
+
+    border-radius: 10px;
+
+    left:5vw;
+    top:6vh;
+
+    border:#000 solid 1px;
+    backdrop-filter: blur(20px);
+
+    left:-20vw;
+
+    z-index: 5;
+}
+
+.hexcode{
+    width:50%;
+    height:100%;
+
+    background-color: rgba(0,0,0,0.5);
+    border:1px solid black;
+
+    border-radius: 10px 0 0 10px;
+
+    color:#fff;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rgb_color{
+    width:50%;
+    height:100%;
+
+    background-color: rgba(255,255,255,0.5);
+    border:1px solid black;
+
+    border-radius: 0 10px 10px 0;
+
+    color:#000;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.guide{
+    background-color: rgba(255,255,255,0.5);
+    width:20vw;
+    height:25vh;
+
+    position: fixed;
+
+    top:15%;
+    left: 2%;
+
+    border-radius: 15px;
+
+    border: 2px solid #000;
+    backdrop-filter: blur(20px);
+
+    left: -30vw;
+    
+    flex-direction: column;
+    align-items: center;
+
+    overflow: scroll;
+    z-index: 10;
+}
+.guide_head{
+    width:100%;
+    height:15%;
+
+    background-color: rgb(34,34,34);
+
+    color:#fff;
+
+    border-radius: 12px 12px 0 0;
+
+    text-align: center;
+
+    font-size: 2rem;
+    font-weight: bold;
+}
+.guide_body{
+    width:90%;
+    height:85%;
+
+    font-size: 1.5rem;
+    font-family: "Noto Sans KR";
+}
+.guide_detail{
+    width:100%;
+    height:100%;
+
+    overflow-y:scroll;
+    word-break: break-word;
+}
+
+.clock{
+    position: absolute;
+    top: 30%;
+    width:100%;
+
+    display: flex;
+    justify-content: center;
+
+}
+.clock_background{
+    width:50%;
+
+    background-color: rgba(255, 255, 255, 0.3);;
+    border-radius: 10px;  
+    /* border:#000 solid 1px;  */
+
+    backdrop-filter: blur(5px);
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+}
+.date{
+    position: relative;
+    top:8%;
+    font-size: 2.5rem;
+
+    font-family: "Noto Sans KR";
+}
+.time{
+    font-size: 15rem;
+    font-family: "Noto Sans KR";
+    font-weight: bold;
+}
+.next_class{
+    position: relative;
+    bottom:7%;
+    font-size: 3rem;
+
+    font-family: "Noto Sans KR";
+}
+
+.memo{
+    width: 40vw;
+    height: 45vh;
+
+    top:45%;
+    left:1%;
+
+    border-radius: 15px;
+
+    background-color: rgba(255,255,255,0.6);
+
+    border: 2px solid #000;
+
+    position: fixed;
+    left: -50vw; /* 초기에는 화면 밖에 위치 */
+
+    overflow: hidden;    
+}
+.memo_head{
+    width:101%;
+    height:15%;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(34,34,34);
+
+    color:#fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.memo_container{
+    width:100%;
+    height:85%;
+
+    display: flex;
+    backdrop-filter: blur(20px);
+
+
+}
+.days{
+    height:100%;
+    width:10%;
+}
+.days > * :hover{
+    z-index: 15;
+    height:15%;
+
+}
+.day{
+    cursor: pointer;
+}
+.day.active {
+    background-color: black;
+    color: white;
+}
+
+.days > *{
+    text-align: center;
+    align-content: center;
+    font-size: 1.5rem;
+
+    font-family: "Anton SC";
+    
+    width:100%;
+    height:14.5%;
+
+    background-color: rgba(255,255,255,0.1);
+    color:black;
+
+    border-top: 1px #000 solid;
+}
+.memo_detail{
+    height:100%;
+    width:90%;
+    backdrop-filter: blur(20px);
+
+    
+}
+#memoDetail textarea {
+    width: 100%;  /* Adjust the width as needed */
+    height: 100%;  /* Adjust the height as needed */
+    font-size: 1.5rem;  /* Adjust the font size as needed */ /* Add some padding */
+    font-family: "Noto Sans KR",Arial, sans-serif;  /* Change the font family */
+    background-color: rgba(255,255,255,0.1);
+
+    word-break: break-word;
+}
+
+.todolist{
+    width:35vw;
+    height:45vh;
+
+    top:45%;
+    left:44%;
+
+    position: fixed;
+    border-radius: 15px;
+
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+
+    border: 2px solid #000;
+
+    top:100vh;
+    display:none;
+
+    flex-direction: column;
+    align-items: center;
+}
+.todolist_head{
+    height:15%;
+    width:100%;
+
+    border-radius: 12px 12px 0 0;
+
+    background-color: rgb(34,34,34);
+
+    color:#fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+
+}
+.todolist_body{
+    height:90%;
+    width:80%;
+    
+    display: flex;
+
+    flex-direction: column;
+    align-items: left;
+    font-size: 1.5rem;
+
+    font-family: "Noto Sans KR";
+
+    overflow: scroll;
+    word-break:break-word;
+}
+.to_dos{
+    width: 100%;
+    height:100%;
+    word-break: break-word;
+}
+#inputitems{
+    margin: 5% auto;
+}
+  
+  .input {
+    padding: 10px;
+    height: 20%;
+    width:80%;
+    border: 2px solid #0B2447;
+    border-top: none;
+    border-bottom: none;
+    font-size: 1.6rem;
+    background: transparent;
+    outline: none;
+    box-shadow: 1rem 1rem 0px 0px #0B2447;
+    transition: all 0.5s;
+  }
+  
+  .input:focus {
+    box-shadow: none;
+    transition: all 0.5s;
+  }
+  
+  .input-container .topline {
+    position: absolute;
+    content: "";
+    background-color: #0B2447;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    top: 0;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .topline {
+    width: 35%;
+    transition: all 0.5s;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    content: "";
+    background-color: #0B2447;
+    width: 0%;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .underline {
+    width: 100%;
+    transition: all 0.5s;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label {
+    top: -10px;
+    transform: scale(1);
+    transition: all 0.5s;
+  }
+
+
+
+.menu {
+    display: inline-block;
+    
+    width: 20vw;
+    height: 100vh;
+    bottom:0vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    right: -20vw; /* 초기에는 화면 밖에 위치 */
+    display: none;    
+}
+.menu_items{
+    width:100%;
+    height:100%;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    
+}
+.menu_item{
+    margin: auto 0;
+    width:14.6vh;
+    
+    border-radius: 10%;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.menu_icon{
+    width:100%;
+    border: 1px black solid;
+    border-radius: 10%;
+}
+.menu_icon :hover{
+    transform: scale(1.08);
+    transition: all 0.5s;
+}
+
+.item_name{
+    position: relative;
+    top:2%;
+
+    color:#fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*하단 바*/
