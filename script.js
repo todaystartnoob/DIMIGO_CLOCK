@@ -547,7 +547,7 @@ const weekdayTimetable = [{
         }
     }
 }, {
-    name: '조회',
+    name: '아침 조회',
     time: {
         start: {
             hour: 8,
