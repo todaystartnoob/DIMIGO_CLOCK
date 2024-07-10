@@ -5,6 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.getElementById("Login").addEventListener('click', function(){
-   location.href = "https://auth.dimigo.net/oauth?client=668dc5a208de1c0525995233&redirect=https://todaystartnoob.github.io/CLOCK/index.html";
+   location.href = "https://auth.dimigo.net/oauth?client=668dc5a208de1c0525995233&redirect=https://todaystartnoob.github.io/DIMIGO_CLOCK/index.html";
 });
 
