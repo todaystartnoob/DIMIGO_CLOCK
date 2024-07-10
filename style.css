@@ -517,14 +517,15 @@ p{
     flex-direction: column;
     align-items: center;
 
-
+    border: #000 qpx solid;
 }
 
 .menu_icon{
     width:100%;
 
     border-radius: 10%;
-    text-decoration: none;
+
+    border: #000 qpx solid;
 }
 .menu_icon :hover{
     transform: scale(1.08);
