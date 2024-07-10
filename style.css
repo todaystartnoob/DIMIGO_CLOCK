@@ -517,11 +517,11 @@ p{
     flex-direction: column;
     align-items: center;
 
-
+    border: 1px black solid;
 }
 .menu_icon{
     width:100%;
-    border: 1px black solid;
+
     border-radius: 10%;
 }
 .menu_icon :hover{
