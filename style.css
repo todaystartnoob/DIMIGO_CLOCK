@@ -541,3 +541,19 @@ p{
     font-weight: bold;
 }
 /*하단 바*/
+
+.button_container{
+    position: absolute;
+
+    width:50px;
+    height:50px;
+    left:1vw;
+    top:90vh;
+}
+
+.button_img{
+    width:100%;
+    
+    background-size: cover;
+    background-position: center;
+}
