@@ -329,20 +329,31 @@ $(document).ready(function() {
 
     let lastSpace = 0;
 
+    function toggleFunctionality() {
+        if ((new Date()).getTime() - lastSpace > debounceDelay) {
+            on = !on;
+            lastSpace = (new Date()).getTime();
+            slide_memo();
+            up_clock();
+            slide_explanation();
+            up_todolist();
+            toggleMenu();
+            make_border();
+            slide_color();
+        }
+    }
+    
     $(document).keydown(function(event) {
         if (!is_memo_on && !is_todolist_on && event.key === ' ') {
-            event.preventDefault(); // 스페이스 키의 기본 동작(스크롤)을 방지
-            if ((new Date()).getTime()-lastSpace > debounceDelay) {
-                if (on) { on = false; } else { on = true; }
-                lastSpace = (new Date()).getTime()
-                slide_memo();
-                up_clock();
-                slide_explanation();
-                up_todolist();
-                toggleMenu();
-                make_border();
-                slide_color();
-            } 
+            event.preventDefault(); // Prevent the default action of the space key (scrolling)
+            toggleFunctionality();
+        }
+    });
+    
+    // Add a click event listener to the document
+    $(document).click(function(event) {
+        if (!is_memo_on && !is_todolist_on) {
+            toggleFunctionality();
         }
     });
 });
