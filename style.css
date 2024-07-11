@@ -552,6 +552,10 @@ p{
 
     border-radius: 10%;
 }
+.button_container :hover{
+    transform: scale(1.1);
+    transition: 0.5s all;
+}
 
 .button_img{
     width:100%;
