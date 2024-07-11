@@ -563,3 +563,7 @@ p{
     background-size: cover;
     background-position: center;
 }
+.button_img :hover{
+    transform: scale(1.1);
+    transition: 0.5s all;
+}
