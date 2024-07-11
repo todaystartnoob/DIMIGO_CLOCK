@@ -351,7 +351,7 @@ $(document).ready(function() {
     });
     
     // Add a click event listener to the document
-    $(document).click(function(event) {
+    $('#mainBody').click(function(event) {
         if (!is_memo_on && !is_todolist_on) {
             toggleFunctionality();
         }
