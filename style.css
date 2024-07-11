@@ -549,6 +549,8 @@ p{
     height:3.47vw;
     left:1vw;
     top:92vh;
+
+    border-radius: 10%;
 }
 
 .button_img{
