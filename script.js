@@ -1105,6 +1105,6 @@ function updateTimetable() {
     }
 }
 
-setInterval(updateTimetable, 1000);
+setInterval(updateTimetable, 100);
 updateTimetable();
 init()
