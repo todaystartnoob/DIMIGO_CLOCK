@@ -351,8 +351,7 @@ $(document).ready(function() {
     });
     
     // Add a click event listener to the document
-    $('#mainBody').click(function(event) {
-        console.log("dbclick");
+    $('#mainBody').dbclick(function(event) {
         if (!is_memo_on && !is_todolist_on) {
             toggleFunctionality();
         }
