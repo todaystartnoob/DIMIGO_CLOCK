@@ -458,32 +458,6 @@ document.addEventListener('keydown', function(event) {
 
 });
 
-// 현재 시간
-function updateTime() {
-    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    const now = new Date();
-    
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0'); // 월은 0부터 시작하므로 1 더함
-    const date = String(now.getDate()).padStart(2, '0');
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    const day = days[now.getDay()];
-    
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    const formattedHours = hours % 12 || 12; // 12시간 형식으로 변환
-
-    const formattedTime = `${year}-${month}-${date} / ${formattedHours} : ${minutes} : ${seconds} ${ampm} / ${day}`;
-    document.getElementById('timeDisplay').textContent = formattedTime;
-}
-
-// 페이지가 로드되면 시간을 업데이트하고, 이후 매초마다 업데이트
-window.onload = function() {
-    updateTime();
-    setInterval(updateTime, 1000);
-};
-
 
 // 남은 시간
 const weekdayTimetable = [{
@@ -1023,6 +997,32 @@ const classSchedules = {
     3: ['', '', '','','','','(플밍)','','(사회)','','(컴일)','','(진로)','','(음악)','','(동아리)','','(자습)','','','','','','','','','','','',''],
     4: ['', '', '','','','','(체육)','','(과학)','','(py)','','(국어)','','(컴일)','','(영어)','','(영어)','','','','','','','','','','','',''],
     5: ['', '', '','','','','(사회)','','(음악)','','(과학)','', '(컴일)', '','(진로)','', '(py)','', '(플밍)','','','','','','','','','','','','']
+};
+
+// 현재 시간
+function updateTime() {
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const now = new Date();
+    
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0'); // 월은 0부터 시작하므로 1 더함
+    const date = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const day = days[now.getDay()];
+    
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const formattedHours = hours % 12 || 12; // 12시간 형식으로 변환
+
+    const formattedTime = `${year}-${month}-${date} / ${formattedHours} : ${minutes} : ${seconds} ${ampm} / ${day}`;
+    document.getElementById('timeDisplay').textContent = formattedTime;
+}
+
+// 페이지가 로드되면 시간을 업데이트하고, 이후 매초마다 업데이트
+window.onload = function() {
+    updateTime();
+    setInterval(updateTime, 1000);
 };
 
 function getCurrentActivity() {
