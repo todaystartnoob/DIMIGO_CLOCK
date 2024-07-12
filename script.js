@@ -237,18 +237,20 @@ $(document).ready(function() {
     function make_border(){
         let clockbg = $('#clockbg');
         if(on){
-            clockbg.animate({
-                borderWidth: '2px',
-                borderColor: '#000',
-                borderStyle: 'solid'
-            }, 700);
+            clockbg.classList.add('clock_active')
+            // clockbg.animate({
+            //     borderWidth: '2px',
+            //     borderColor: '#000',
+            //     borderStyle: 'solid'
+            // }, 700);
         }
         else{
-            clockbg.animate({
-                borderWidth: '0',
-                borderColor: 'transparent',
-                borderStyle: 'none'
-            } ,700);
+            clockbg.classList.remove('clock_active')
+            // clockbg.animate({
+            //     borderWidth: '0',
+            //     borderColor: 'transparent',
+            //     borderStyle: 'none'
+            // } ,700);
         }
     }
 
