@@ -235,11 +235,16 @@ $(document).ready(function() {
     const debounceDelay = 705; // 2초 디바운스 딜레이
 
     function make_border(){
+        let clockbg = $('#clockbg');
         if(on){
-            document.getElementById('clockbg').style.border = '2px solid #000';
+            clockbg.animate({
+                border : '2px solid #000'
+            }, 1000);
         }
         else{
-            document.getElementById('clockbg').style.border = 'none';
+            clockbg.animate({
+                border:'none'
+            } ,1000);
         }
     }
 
