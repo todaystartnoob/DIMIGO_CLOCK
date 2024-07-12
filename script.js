@@ -238,13 +238,17 @@ $(document).ready(function() {
         let clockbg = $('#clockbg');
         if(on){
             clockbg.animate({
-                border : '2px solid #000'
-            }, 1000);
+                borderWidth: '2px',
+                borderColor: '#000',
+                borderStyle: 'solid'
+            }, 700);
         }
         else{
             clockbg.animate({
-                border:'none'
-            } ,1000);
+                borderWidth: '0',
+                borderColor: 'transparent',
+                borderStyle: 'none'
+            } ,700);
         }
     }
 
