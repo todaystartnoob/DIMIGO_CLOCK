@@ -237,7 +237,7 @@ $(document).ready(function() {
     function make_border(){
         let clockbg = $('#clockbg');
         if(on){
-            clockbg.classList.add('clock_active')
+            clockbg.addClass('clock_active')
             // clockbg.animate({
             //     borderWidth: '2px',
             //     borderColor: '#000',
@@ -245,7 +245,7 @@ $(document).ready(function() {
             // }, 700);
         }
         else{
-            clockbg.classList.remove('clock_active')
+            clockbg.removeClass('clock_active')
             // clockbg.animate({
             //     borderWidth: '0',
             //     borderColor: 'transparent',
