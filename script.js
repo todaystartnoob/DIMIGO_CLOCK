@@ -830,18 +830,6 @@ const weekdayTimetable = [{
             minute: 50
         }
     }
-}, {
-    name: '수면',
-    time: {
-        start: {
-            hour: 23,
-            minute: 50
-        },
-        end: {
-            hour: 6,
-            minute: 30
-        }
-    }
 }];
 const weekendTimetable = [{
     name: '아침 기상',
@@ -1021,18 +1009,6 @@ const weekendTimetable = [{
         end: {
             hour: 22,
             minute: 40
-        }
-    }
-}, {
-    name: '수면',
-    time: {
-        start: {
-            hour: 22,
-            minute: 40
-        },
-        end: {
-            hour: 6,
-            minute: 30
         }
     }
 }];
